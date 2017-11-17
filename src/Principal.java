@@ -7,7 +7,8 @@ public class Principal {
 		teste.toPlant("Tomate", 5);
 		teste.toWater();
 		teste.toPlant("Cebola", 5);
-		System.out.println(teste.plantation[5]);
+		for ( int i = 0; i < 5; i++)
+			System.out.println(teste.plantation[i]);
 		
 		
 	}

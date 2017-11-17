@@ -1,6 +1,7 @@
 
 public class Floor {
-	
+
+
 	//Attributes
 	public int id;
 	public int capacity;
@@ -47,3 +48,5 @@ public class Floor {
 	
 	
 }
+
+

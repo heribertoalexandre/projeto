@@ -77,8 +77,10 @@ public class Plant {
 			Random random = new Random();
 			int x = random.nextInt(5) + 1;
 			int fruitGeneration = (this.timeOfLife / 4) * x;
-			if(this.fertilized == true)
+			if(this.fertilized)
 				fruitGeneration *= 2;
+			if(this.watered)
+				fruitGeneration += 2;
 			return fruitGeneration;
 		}
 		return 0;

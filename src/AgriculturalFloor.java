@@ -40,13 +40,21 @@ public class  AgriculturalFloor extends Floor {
 			plantation[cont].setFertilized();
 	}
 	
-	public void toPlant(String product,int amount) {
-		for(int cont = this.qtyPlants; cont < this.qtyPlants + amount ; cont++) {
-			plantation[cont] = new Plant (product);
-		}
+	public void toPlant(Plant plant, int x ) {
 		
-		this.setQtyPlants(this.getQtyPlants() + amount);
-		this.setCapacity(this.getCapacity() - amount);
+		int atual = this.qtyPlants;
+		int cont = 0;
+		boolean exhausted = false;
+		
+		do{
+			if(this.qtyPlants + 1 <= this.capacity){
+				plantation[qtyPlants] = plant;
+				this.setQtyPlants(this.qtyPlants + 1);
+				cont++;
+			}else
+				exhausted = true;
+			
+		}while(cont <= x &&  exhausted == false);
 	}
 
 	//toString
